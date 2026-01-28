@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leçon 1 – Preuve et complexité algorithmique</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="nav-auto"></div>
+
+    <main class="main-content">
+
+        <h1 class="mb-4">Leçon 1 : Preuve et complexité algorithmique</h1>
+
+        <div class="card mb-4 p-3">
+            <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+            <p>Cette semaine, j’ai découvert les bases de la preuve d’algorithmes et de la complexité algorithmique. J’ai compris qu’un
+                algorithme ne doit pas seulement fonctionner, mais aussi terminer, être correct et efficace. Au début, la différence
+                entre correction partielle et correction totale n’était pas évidente, mais les exemples avec les invariants de boucle
+                m’ont aidé à mieux comprendre. La notation Big O m’a particulièrement marqué, car elle permet de comparer les
+                algorithmes indépendamment de la machine utilisée. Ma principale difficulté reste l’identification correcte des
+                invariants de boucle et le calcul de la complexité des algorithmes imbriqués. Globalement, cette leçon m’a donné une
+                vision plus rigoureuse de l’algorithmique.
+            </p>
+        </div>
+
+        <div class="card mb-4 p-3">
+            <h4>2️⃣ Synthèse personnelle</h4>
+            <p>La preuve d’un algorithme consiste à démontrer mathématiquement qu’il termine et qu’il produit le résultat attendu.
+                <Ul>
+                    <li>
+                        La terminaison garantit que l’algorithme ne boucle pas à l’infini.
+                    </li>
+                    <li>
+                        La correction partielle assure que si l’algorithme termine, alors le résultat est correct.
+                    </li>
+                    <li>
+                        La correction totale combine terminaison et correction partielle.
+                    </li>
+                </Ul>
+                <br>
+                La complexité algorithmique mesure le coût d’un algorithme en temps ou en espace selon la taille des données. La
+                notation Big O permet d’exprimer la croissance du temps d’exécution dans le pire des cas. Les classes de complexité
+                courantes sont O(1), O(log n), O(n), O(n log n), O(n²) et O(2ⁿ). Enfin, les problèmes sont classés en P, NP,
+                NP-difficiles et NP-complets selon leur difficulté.
+            </p>
+        </div>
+
+        <div class="card mb-4 p-3">
+            <h4>3️⃣ Application pratique</h4>
+            <p>Dans mes projets de développement informatique, notamment pour les applications web, cette leçon m’aide à choisir des
+                algorithmes plus efficaces. Par exemple, lors du traitement d’une liste d’utilisateurs ou de demandes, je peux éviter
+                des doubles boucles inutiles (O(n²)) et privilégier des algorithmes linéaires ou logarithmiques. La preuve d’algorithme
+                me permet aussi de m’assurer que mes fonctions critiques (recherche, calcul, tri) donnent toujours des résultats
+                corrects et se terminent, ce qui est essentiel pour la fiabilité d’un système informatique.
+            </p>
+        </div>
+
+        <div class="card p-3">
+            <h4>4️⃣ Auto-évaluation</h4>
+            <ul>
+                <li><strong>Ce que je maîtrise bien : </strong> La définition d’un algorithme, La notion de complexité temporelle, La compréhension générale de la notation Big O…</li>
+                <li><strong>Ce que je dois améliorer : </strong> L’identification des invariants de boucle, Le calcul de la complexité des algorithmes récursifs, La distinction rapide entre classes P et NP.</li>
+                <li><strong>Stratégie pour progresser :</strong> Faire plus d’exercices corrigés, Reprendre les exemples du cours et les expliquer avec mes propres mots, Implémenter les algorithmes vus en pseudo-code et en langage de programmation.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer class="text-center text-muted py-3">
+        © 2026 – Portfolio Algorithmique et Complexité
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
+
+</html>

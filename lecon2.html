@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Leçon 2</title>
+    <title>Leçon 2 – Algorithmes de tri</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,8 +15,68 @@
 
     <main class="main-content">
 
-        <h1>Leçon 2</h1>
-        <p>Pas encore disponible</p>
+        <h1 class="mb-4">Leçon 2 : Algorithmes de tri </h1>
+
+        <div class="card mb-4 p-3">
+            <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+            <p>Cette semaine, j’ai approfondi les différents algorithmes de tri : sélection, insertion, bulles et tri rapide. J’ai mieux compris leurs propriétés comme la stabilité, l’adaptativité et le fonctionnement in‑place, grâce aux analogies du cours (cartes, boîtes, livres) qui m’ont aidé à visualiser les concepts.
+               Ma plus grande réussite a été de saisir le rôle critique du pivot dans le tri rapide ainsi que le mécanisme de partitionnement. Le point le plus difficile a été de mémoriser les différences précises entre tri stable et non stable, ainsi que d’identifier rapidement lequel est adapté selon le contexte.
+               Je me sens plus confiant pour analyser la complexité et choisir un algorithme selon la taille ou la disposition des données.
+            </p>
+        </div>
+
+        <div class="card mb-4 p-3">
+            <h4>2️⃣ Synthèse personnelle</h4>
+            <p>Un algorithme de tri sert à ordonner des éléments selon une relation d’ordre (par exemple, classer des étudiants par matricule).
+                <Ul>
+                    <li>
+                        Les tris possèdent plusieurs propriétés essentielles :
+                        <li><strong>In-place vs Not in-place : </strong> un tri in-place n’utilise pas de structure mémoire supplémentaire ; un tri non in‑place utilise un second tableau.</li>
+                        <li><strong>Stable vs Non stable :  </strong>un tri stable conserve l’ordre de deux éléments égaux.</li>
+                        <li><strong>Adaptatif vs Non adaptatif :  </strong>un tri adaptatif exploite les parties déjà triées, ce qui améliore les performances sur des données presque ordonnées.</li>
+                    </li>
+                    <li>
+                        Les quatre tris étudiés ont chacun leurs caractéristiques :
+                        <li><strong>Sélection : </strong> simple mais toujours en O(n²), non stable.</li>
+                        <li><strong>Insertion : </strong> stable, efficace sur données presque triées.</li>
+                        <li><strong>Bulles : </strong>stable, simple, performant uniquement sur petites listes ou listes presque triées. </li>
+                        <li> <strong>Rapide (QuickSort) :</strong> très performant en moyenne (O(n log n)), basé sur diviser‑pour‑régner et le choix d’un pivot.</li>
+                </Ul>
+                <br>
+            </p>
+        </div>
+
+        <div class="card mb-4 p-3">
+            <h4>3️⃣ Application pratique</h4>
+            <p>Dans mon rôle de Stagiaire – Agent Test chez MTN CI, je travaille avec de nombreuses données lors des scénarios de tests (logs, listes d’abonnés, retours d’API).
+               L’apprentissage de cette leçon me permettrait par exemple :
+               <li>d’utiliser le tri rapide pour organiser rapidement des grandes listes de résultats de tests générés automatiquement ;</li>
+               <li>d’utiliser le tri par insertion pour traiter des données déjà presque triées, comme des journaux ordonnés par timestamp mais avec quelques anomalies ;</li>
+               <li>d’identifier les cas où un tri stable est nécessaire, par exemple lorsque deux transactions ont le même identifiant primaire mais des métadonnées différentes que je veux conserver dans leur ordre d’origine.</li>
+            </p>
+            Ces concepts m’aideront à optimiser mes scripts d’analyse ou d’automatisation en choisissant l’algorithme le plus approprié au contexte.
+        </div>
+
+        <div class="card p-3">
+            <h4>4️⃣ Auto-évaluation</h4>
+            <ul>
+                <h5>Ce que je maîtrise bien :</h5>
+                <li>Les principes des différents tris (sélection, insertion, bulles, rapide).</li>
+                <li>L’idée de stabilité et l’importance du pivot dans le tri rapide.</li>
+                <li>La comparaison des complexités des algorithmes étudiés.</li>
+
+                <h5>Ce que je dois améliorer : </h5>
+                <li>Identifier rapidement dans quelle situation chaque tri est le plus performant.</li>
+                <li>Comprendre plus en profondeur l’implémentation détaillée du partitionnement du tri rapide.</li>
+                <li>M’entraîner davantage à écrire les algorithmes en pseudo‑code.</li>
+
+                <h5>Stratégie pour progresser : </h5>
+                <li>Refaire les exercices de la fiche d’application.</li>
+                <li>Implémenter chaque algorithme dans un langage au choix (Python, C, pseudocode) pour améliorer la compréhension.</li>
+                <li>Tester ces tris sur des cas réels de données provenant de mes travaux (listes, logs, résultats de tests).</li>
+            </ul>
+        </div>
+        
 
     </main>
 

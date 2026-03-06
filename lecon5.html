@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Leçon 5</title>
+    <title>Leçon 1 – Preuve et complexité algorithmique</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,10 +15,101 @@
 
     <main class="main-content">
 
-        <h1>Leçon 5</h1>
-        <p>Pas encore disponible</p>
+  <h1 class="mb-4">Leçon 5 : Table de hachage</h1>
 
-    </main>
+  <div class="card mb-4 p-3">
+    <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+    <p>
+      Cette semaine, j’ai étudié les <strong>tables de hachage</strong>, des structures clé–valeur offrant des accès en moyenne en <strong>O(1)</strong>. 
+      J’ai compris le rôle d’une <em>fonction de hachage</em> pour transformer une clé en indice et pourquoi cela peut surpasser tableaux, listes chaînées ou arbres pour certaines recherches. 
+      Les propriétés d’une bonne fonction (répartition uniforme, calcul constant, déterminisme) m’ont paru claires, même si je dois pratiquer pour bien choisir <em>m</em> et <em>A</em> selon les méthodes. 
+      La <strong>gestion des collisions</strong> (chaînage séparé, adressage ouvert : sondage linéaire, quadratique, double hachage) m’a demandé de l’attention, mais les comparatifs et exemples m’ont aidé. 
+      Je me sens désormais plus confiant pour dimensionner une table, surveiller le <em>facteur de charge</em> et décider quand <strong>redimensionner</strong>. 
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>2️⃣ Synthèse personnelle</h4>
+    <p>
+      Une <strong>table de hachage</strong> associe des paires <em>clé → valeur</em> dans un tableau indexé par la valeur renvoyée par une <strong>fonction de hachage</strong>. 
+      L’accès et l’insertion sont <em>en moyenne</em> en O(1) ; dans le pire cas (mauvaise répartition ou collisions accumulées), on peut aller jusqu’à O(n).
+    <ul>
+      <li>
+        <strong>Fonction de hachage : propriétés</strong> — calcul rapide (≈O(1)), répartition uniforme, déterminisme. 
+        Trois familles courantes :
+        <ul>
+          <li><strong>Division</strong> : h(k) = k mod m (éviter m puissance de 2/10 selon les clés).</li>
+          <li><strong>Multiplication</strong> : h(k) = ⌊m × (kA mod 1)⌋, choix d’<em>A</em> proche de (√5 − 1)/2.</li>
+          <li><strong>Universelle/Parfaite</strong> : familles pour réduire le pire cas ; parfaite si l’ensemble de clés est fixe. </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collisions &amp; résolutions</strong> :
+        <ul>
+          <li><strong>Chaînage séparé</strong> : chaque case pointe vers une liste chaînée d’entrées (simple à coder, surcoût pointeurs). </li>
+          <li><strong>Adressage ouvert</strong> :
+            <ul>
+              <li><em>Sondage linéaire</em> (i, i+1, …) — bon cache, <em>clustering primaire</em>.</li>
+              <li><em>Sondage quadratique</em> (i, i+1, i+4, i+9, …) — réduit le clustering primaire, peut créer un <em>clustering secondaire</em>.</li>
+              <li><em>Double hachage</em> — utilise h et h′, réduit les clusters, suppression plus délicate. </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Performance</strong> :
+        <ul>
+          <li><em>Capacité</em> de la table et <em>facteur de charge</em> α = n / taille guident la performance ; α ≈ 0,75 est un repère courant.</li>
+          <li><strong>Redimensionnement</strong> : ré‑hachage dans une table plus grande lorsque α atteint un seuil. </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>3️⃣ Application pratique</h4>
+    <p>
+      Dans mon rôle de Stagiaire – Agent Test chez MTN CI, je peux tirer parti des tables de hachage pour :
+    </p>
+    <ul>
+      <li>
+        <strong>Indexer instantanément</strong> les résultats de tests par identifiant unique (ID exécution → verdict), pour des consultations en quasi O(1) lors des analyses. 
+      </li>
+      <li>
+        <strong>Référentiel MSISDN</strong> (clé = numéro d’abonné) afin de récupérer rapidement les informations associées dans des outils internes, plutôt qu’un parcours séquentiel. 
+      </li>
+      <li>
+        <strong>Tagging/filtrage de logs</strong> : mappage d’événements (clé = code d’erreur / signature) → métadonnées (criticité, action) pour accélérer les diagnostics. 
+      </li>
+      <li>
+        <strong>Caching léger</strong> côté scripts d’automatisation (clé = requête, valeur = réponse) avec gestion de la taille via le facteur de charge et éviction simple. 
+      </li>
+    </ul>
+    <p>
+      Bénéfices : <em>délai de recherche réduit</em>, <em>complexité maîtrisée</em> et <em>meilleure réactivité</em> des outils de test. 
+    </p>
+  </div>
+
+  <div class="card p-3">
+    <h4>4️⃣ Auto-évaluation</h4>
+    <ul>
+      <h5>Ce que je maîtrise bien :</h5>
+      <li>Principe clé–valeur, accès moyen en O(1), pire cas O(n).</li>
+      <li>Propriétés d’une bonne fonction de hachage et familles (division, multiplication, universelle/parfaite).</li>
+      <li>Stratégies de collisions (chaînage séparé, adressage ouvert) et notions de clustering.</li>
+
+      <h5>Ce que je dois améliorer :</h5>
+      <li>Choix pratique des paramètres (taille m, constante A, seconde fonction h′).</li>
+      <li>Impact du <em>facteur de charge</em> selon chaque stratégie (latence insertion/recherche/suppression).</li>
+      <li>Procédure robuste de <strong>redimensionnement</strong> et rehash minimal perturbant.</li>
+
+      <h5>Stratégie pour progresser :</h5>
+      <li>Implémenter une table de hachage simple (chaînage) puis une version à adressage ouvert (linéaire, quadratique, double hachage).</li>
+      <li>Mesurer empiriquement les performances en faisant varier α (ex : 0,5 → 0,9) et la distribution des clés.</li>
+      <li>Tester sur des jeux réels (IDs de tests, MSISDN, codes d’erreur) pour observer clustering et collisions.</li>
+    </ul>
+  </div>
+
+</main>
 
     <footer class="text-center text-muted py-3">
         © 2026 – Portfolio Algorithmique et Complexité

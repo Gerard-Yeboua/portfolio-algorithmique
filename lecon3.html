@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Leçon 3</title>
+    <title>Leçon 3 – tructures de données séquentielles de base</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,10 +15,85 @@
 
     <main class="main-content">
 
-        <h1>Leçon 3</h1>
-        <p>Pas encore disponible</p>
+  <h1 class="mb-4">Leçon 3 : Structures de données séquentielles de base</h1>
 
-    </main>
+  <div class="card mb-4 p-3">
+    <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+    <p>
+      Cette semaine, j’ai appris à modéliser et manipuler les <strong>listes chaînées</strong>, ainsi que deux structures spéciales : les <strong>piles (LIFO)</strong> et les <strong>files (FIFO)</strong>. 
+      Les limites des tableaux (taille fixe, coûts d’insertion/suppression) m’ont aidé à comprendre pourquoi on passe à des structures dynamiques. Les schémas de cellules et pointeurs ont clarifié l’implantation mémoire. 
+      J’ai bien assimilé les opérations de base (parcours, insertion en tête, suppression) et les notions de complexité. Les variantes (doublement chaînées, circulaires) m’ont demandé un peu plus d’attention, surtout pour les cas particuliers de suppression. 
+      Les exemples concrets (historique navigateur pour les piles, files d’attente pour les files) ont rendu la leçon très intuitive.   
+    </p>
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>2️⃣ Synthèse personnelle</h4>
+    <p>
+      Une <strong>structure de données</strong> définit comment les informations sont représentées en mémoire et manipulées (ajout, suppression, parcours, tri, etc.). 
+      La leçon se concentre sur trois structures séquentielles :
+    </p>
+    <ul>
+      <li>
+        <strong>Limites des tableaux</strong> : taille figée, besoin de mémoire contiguë, insertions/suppressions coûteuses (décalages), fusion/scission difficiles. 
+        → Motivation pour des structures dynamiques.   
+      </li>
+      <li>
+        <strong>Listes chaînées</strong> : chaque nœud contient une <em>info</em> et un pointeur <em>suivant</em>; accès séquentiel via un pointeur <em>tête</em>. 
+        Opérations typiques : test de liste vide, ajout (souvent en tête), parcours, extraction/suppression, insertion au milieu, destruction, copie, sauvegarde. 
+        Comparatif (ordre de grandeur) : accès aléatoire O(n) mais insertion/suppression en tête en O(1). Variantes : simple, doublement chaînée, circulaire, doublement circulaire.   
+      </li>
+      <li>
+        <strong>Piles (LIFO)</strong> : opérations <em>empiler</em> (push), <em>dépiler</em> (pop), <em>sommet</em>, <em>est_vide</em> — toutes en O(1). Usages : historique navigateur, undo/redo, récursivité, pile d’appels.   
+      </li>
+      <li>
+        <strong>Files (FIFO)</strong> : opérations <em>enfiler</em> (enqueue), <em>défiler</em> (dequeue), <em>tête</em>, <em>est_vide</em> — en O(1) avec pointeurs tête/queue. Usages : ordonnancement CPU/disque, files réseau, synchronisation.   
+      </li>
+    </ul>
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>3️⃣ Application pratique</h4>
+    <p>
+      Dans mon rôle de Stagiaire – Agent Test chez MTN CI, je peux appliquer ces concepts ainsi :
+    </p>
+    <ul>
+      <li>
+        <strong>File (FIFO)</strong> pour exécuter des scénarios de test dans l’ordre d’arrivée (gestion de lots, ordonnanceur simple) et pour modéliser des files d’événements de logs.   
+      </li>
+      <li>
+        <strong>Pile (LIFO)</strong> pour gérer l’historique d’étapes d’un test automatisé (annuler/rétablir) ou naviguer dans les états d’un workflow.   
+      </li>
+      <li>
+        <strong>Liste chaînée</strong> pour des séquences dynamiques (résultats intermittents, flux non bornés) où l’on insère/supprime fréquemment au début/milieu sans payer des décalages coûteux.   
+      </li>
+    </ul>
+    <p>
+      Ces choix améliorent la performance, la clarté et la maintenabilité des scripts et outils internes.   
+    </p>
+  </div>
+
+  <div class="card p-3">
+    <h4>4️⃣ Auto-évaluation</h4>
+    <ul>
+      <h5>Ce que je maîtrise bien :</h5>
+      <li>Les limites des tableaux et la motivation vers des structures dynamiques.</li>
+      <li>Les opérations de base sur les listes chaînées (parcours, insertion en tête, suppression).</li>
+      <li>Le fonctionnement des piles (LIFO) et files (FIFO) avec leurs cas d’usage.</li>
+
+      <h5>Ce que je dois améliorer :</h5>
+      <li>Les cas particuliers de suppression dans les listes (tête, milieu, fin).</li>
+      <li>Les variantes (doublement chaînées, circulaires) et leurs implications.</li>
+      <li>La mémorisation fine des complexités selon l’opération et la structure.</li>
+
+      <h5>Stratégie pour progresser :</h5>
+      <li>Refaire les exercices de la fiche n°3 et coder les algorithmes en pseudo‑code puis Python/C.</li>
+      <li>Construire un mini-projet (simulateur pile/file) connecté à des jeux de données de tests.</li>
+      <li>Mesurer empiriquement les coûts (temps/mémoire) sur logs et listes d’abonnés.</li>
+    </ul>
+  </div>
+
+</main>
 
     <footer class="text-center text-muted py-3">
         © 2026 – Portfolio Algorithmique et Complexité

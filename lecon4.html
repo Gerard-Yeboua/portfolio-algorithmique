@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Leçon 4</title>
+    <title>Leçon 4 : Structures de données hiérarchiques</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,10 +15,82 @@
 
     <main class="main-content">
 
-        <h1>Leçon 4</h1>
-        <p>Pas encore disponible</p>
+  <h1 class="mb-4">Leçon 4 : Structures de données hiérarchiques</h1>
 
-    </main>
+  <div class="card mb-4 p-3">
+    <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+    <p>
+      Cette semaine, j’ai étudié les <strong>arbres binaires</strong>, les <strong>arbres binaires de recherche (ABR)</strong> et les <strong>tas (heaps)</strong>. 
+      J’ai clarifié la terminologie (racine, père, fils, niveau, profondeur/hauteur, feuille, degré) et la typologie (arbre strict, complet, parfait, équilibré). 
+      Les parcours <em>DFS</em> (préfixé, infixé, postfixé) et leur logique m’ont semblé accessibles. 
+      Ma réussite principale est la compréhension de l’<strong>insertion</strong> et de la <strong>recherche</strong> dans un ABR ; ma difficulté réside encore dans la <strong>suppression</strong> (trois cas à maîtriser). 
+      Côté tas, le principe “binaire complet + propriété de tas” ainsi que les opérations d’<em>ajout</em> et de <em>retrait</em> sont devenus plus intuitifs grâce aux exemples. 
+    </p>
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>2️⃣ Synthèse personnelle</h4>
+    <p>
+      Un <strong>arbre</strong> est une structure <em>non linéaire</em> où les données sont organisées de façon hiérarchique par relation parent–enfant. Un <strong>arbre binaire</strong> limite chaque nœud à deux fils (gauche, droit). 
+      Les variantes fréquentes : <em>filiforme/dégénéré</em>, <em>strict</em> (0 ou 2 fils), <em>complet</em>, <em>parfait</em> et <em>équilibré</em>.  
+    </p>
+    <ul>
+      <li>
+        <strong>ABR (Arbre Binaire de Recherche)</strong> : pour tout nœud, les valeurs du sous-arbre gauche sont < à la valeur du nœud et celles du sous-arbre droit sont > (ou ≥/≤ selon convention). 
+        Opérations : <em>recherche</em>, <em>insertion</em> (descente gauche/droite), <em>suppression</em> (3 cas : feuille, un enfant, deux enfants avec successeur/prédécesseur). 
+        Parcours <em>DFS</em> : <strong>préfixé</strong> (racine, gauche, droite), <strong>infixé</strong> (gauche, racine, droite), <strong>postfixé</strong> (gauche, droite, racine).  
+      </li>
+      <li>
+        <strong>Tas (heap)</strong> : <em>arbre binaire complet</em> respectant la propriété de tas : 
+        <em>max-heap</em> (chaque parent ≥ ses enfants) ou <em>min-heap</em> (chaque parent ≤ ses enfants). 
+        Opérations : <em>ajout</em> (insertion en dernière position puis remontée), <em>retrait</em> (remplacer la racine par le dernier élément puis descente). 
+        Applications : files de priorité, planification, Dijkstra, etc.  
+      </li>
+    </ul>
+  </div>
+
+  <div class="card mb-4 p-3">
+    <h4>3️⃣ Application pratique</h4>
+    <p>
+      Dans mon rôle de Stagiaire – Agent Test chez MTN CI, ces structures s’emploient concrètement ainsi :
+    </p>
+    <ul>
+      <li>
+        <strong>ABR</strong> : indexer des logs/tests par clé (horodatage, identifiant), afin d’accélérer la recherche par clé plutôt qu’un parcours linéaire.  
+      </li>
+      <li>
+        <strong>Files de priorité via tas</strong> : prioriser l’exécution de scénarios de test (critique &gt; normal) ou le traitement d’événements (alertes réseau, anomalies) en temps quasi-réel.  
+      </li>
+      <li>
+        <strong>Arbres hiérarchiques</strong> : modéliser la structure de dossiers d’un projet, l’architecture d’environnements de test, ou les dépendances entre services pour des analyses d’impact.  
+      </li>
+    </ul>
+    <p>
+      Résultat : une meilleure performance de recherche, un ordonnancement plus pertinent et une représentation claire des dépendances.  
+    </p>
+  </div>
+
+  <div class="card p-3">
+    <h4>4️⃣ Auto-évaluation</h4>
+    <ul>
+      <h5>Ce que je maîtrise bien :</h5>
+      <li>Terminologie des arbres (racine, niveau, profondeur/hauteur, feuille, degré) et typologie (strict, complet, parfait, équilibré).</li>
+      <li>Recherche et insertion dans un ABR ; parcours DFS (pré/in/postfixé).</li>
+      <li>Principe des tas, ajout (remontée) et retrait (descente), et usages en priorité.</li>
+
+      <h5>Ce que je dois améliorer :</h5>
+      <li>Suppression dans un ABR (cas feuille, 1 enfant, 2 enfants + successeur/prédécesseur).</li>
+      <li>Choix de la structure adéquate (ABR vs tas) selon le pattern d’accès aux données.</li>
+      <li>Analyse fine de la complexité en pratique (taille, équilibre, coûts de rééquilibrage).</li>
+
+      <h5>Stratégie pour progresser :</h5>
+      <li>Coder un ABR (recherche/insertion/suppression) et un tas (push/pop) et tester sur jeux de données réels.</li>
+      <li>Tracer les parcours DFS et vérifier l’ordre produit (infixé = ordre trié pour ABR).</li>
+      <li>Mesurer empiriquement les temps (insertion/recherche/suppression) pour différentes tailles/formes d’arbres.</li>
+    </ul>
+  </div>
+
+</main>
 
     <footer class="text-center text-muted py-3">
         © 2026 – Portfolio Algorithmique et Complexité

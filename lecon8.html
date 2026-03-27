@@ -2,22 +2,84 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Leçon 8</title>
+  <meta charset="UTF-8">
+  <title>Leçon 1 – Preuve et complexité algorithmique</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div id="nav-auto"></div>
+  <div id="nav-auto"></div>
 
     <main class="main-content">
+      <h1 class="mb-4">Leçon 8 : Techniques de conception d’algorithmes approchés</h1>
 
-        <h1>Leçon 8</h1>
-        <p>Pas encore disponible</p>
+      <div class="card mb-4 p-3">
+        <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+        <p>
+          Cette semaine, j’ai découvert les <strong>algorithmes approchés</strong>, notamment les heuristiques et les méta‑heuristiques. J’ai compris que pour certains problèmes, surtout NP‑difficiles, une solution exacte est trop coûteuse en temps ou en ressources. Les heuristiques gloutonnes m’ont semblé simples et intuitives, mais leur manque d’optimalité potentielle m’a interpellé. La recherche locale m’a fait réaliser l’importance du voisinage et des optima locaux, tandis que les méta‑heuristiques comme la <strong>recherche tabou</strong> et les <strong>algorithmes génétiques</strong> m’ont fascinées par leur capacité à équilibrer exploration et exploitation. citeturn8search3
+        </p>
+      </div>
 
+      <div class="card mb-4 p-3">
+        <h4>2️⃣ Synthèse personnelle</h4>
+        <ul>
+          <li>
+            <strong>Heuristiques gloutonnes :</strong> construisent une solution étape par étape en choisissant toujours le meilleur choix local. Rapides mais non garanties optimales. Exemple : rendu de monnaie. citeturn8search3
+          </li>
+          <li>
+            <strong>Recherche locale :</strong> part d’une solution puis explore le voisinage pour l’améliorer. Très utilisée pour les problèmes combinatoires (TSP, sac à dos). Concepts clés : <em>voisinage</em>, <em>optima locaux</em>, stratégies d’exploration. citeturn8search3
+          </li>
+          <li>
+            <strong>Heuristiques constructives :</strong> construisent progressivement une solution (insertion, fusion, décomposition). Utilisées pour les problèmes de tournées, ordonnancement, etc. citeturn8search3
+          </li>
+          <li>
+            <strong>Méta‑heuristiques :</strong> algorithmes avancés guidant la recherche, capables d’échapper aux optima locaux. Exemples : <strong>Recherche tabou</strong>, <strong>Algorithmes génétiques</strong>. Elles équilibrent diversification et intensification. citeturn8search3
+          </li>
+        </ul>
+      </div>
+
+      <div class="card mb-4 p-3">
+        <h4>3️⃣ Application pratique</h4>
+        <p>
+          Dans mon rôle de Stagiaire – Agent Test chez MTN CI, plusieurs concepts sont applicables :
+        </p>
+        <ul>
+          <li>
+            <strong>Heuristique gloutonne :</strong> utile pour sélectionner rapidement un ensemble minimal d’éléments critiques dans un rapport de test (ex. top erreurs). citeturn8search3
+          </li>
+          <li>
+            <strong>Recherche locale :</strong> peut optimiser des scénarios de tests complexes (assemblages de paramètres) pour trouver une configuration valide ou la meilleure combinaison. citeturn8search3
+          </li>
+          <li>
+            <strong>Recherche tabou :</strong> applicable pour éviter que des scripts exploratoires reviennent constamment sur des configurations déjà invalidées. citeturn8search3
+          </li>
+          <li>
+            <strong>Algorithmes génétiques :</strong> utiles pour optimiser automatiquement des jeux de tests, en améliorant génération après génération les séquences exécutées. citeturn8search3
+          </li>
+        </ul>
+      </div>
+
+      <div class="card p-3">
+        <h4>4️⃣ Auto-évaluation</h4>
+        <ul>
+          <h5>Ce que je maîtrise bien :</h5>
+          <li>Le principe des heuristiques gloutonnes et leur simplicité d’implémentation.</li>
+          <li>Le fonctionnement général de la recherche locale et du voisinage.</li>
+          <li>La logique des méta‑heuristiques : intensification, diversification, mémoire.</li>
+
+          <h5>Ce que je dois améliorer :</h5>
+          <li>Choisir la meilleure heuristique selon le type de problème.</li>
+          <li>Comprendre plus en profondeur les structures de voisinage complexes.</li>
+          <li>Maîtriser les paramètres des algorithmes génétiques (mutation, croisement, population).</li>
+
+          <h5>Stratégie pour progresser :</h5>
+          <li>Mettre en pratique les heuristiques sur de petits problèmes concrets (sac à dos, TSP).</li>
+          <li>Expérimenter la recherche tabou sur des cas réels de tests automatisés.</li>
+          <li>Implémenter un mini algorithme génétique pour optimiser un ensemble de données.</li>
+        </ul>
+      </div>
     </main>
 
     <footer class="text-center text-muted py-3">
@@ -28,5 +90,4 @@
     <script src="js/nav.js"></script>
 
 </body>
-
 </html>

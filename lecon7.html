@@ -2,24 +2,68 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Leçon 7</title>
+  <meta charset="UTF-8">
+  <title>Leçon 1 – Preuve et complexité algorithmique</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div id="nav-auto"></div>
+  <div id="nav-auto"></div>
 
-    <main class="main-content">
-
-        <h1>Leçon 7</h1>
-        <p>Pas encore disponible</p>
-
-    </main>
-
+  <main class="main-content">
+    <h1 class="mb-4">Leçon 7 : Techniques classiques de conception d’algorithmes</h1>
+    <div class="card mb-4 p-3">
+      <h4>1️⃣ Journal d’apprentissage réflexif</h4>
+      <p>
+        Cette semaine, j’ai étudié trois grands paradigmes de conception d’algorithmes : <strong>Diviser pour régner</strong>, <strong>Programmation dynamique</strong> et <strong>Backtracking</strong>. J’ai compris pourquoi la force brute devient vite inefficace lorsque la taille des données augmente. Le paradigme « diviser pour régner » m’a paru très clair grâce à sa structure en trois étapes (Diviser – Régner – Combiner). J’ai toutefois rencontré des difficultés avec la résolution des récurrences et l’application du théorème maître. La programmation dynamique m’a particulièrement intéressé grâce à la notion de sous-problèmes qui se chevauchent. Enfin, j’ai compris que le backtracking sert surtout lorsque la structure du problème ne permet pas d’optimisation directe. citeturn8search1
+      </p>
+    </div>
+    <div class="card mb-4 p-3">
+      <h4>2️⃣ Synthèse personnelle</h4>
+      <ul>
+        <li>
+          <strong>Diviser pour régner</strong> : consiste à diviser un problème en sous-problèmes plus petits, à les résoudre récursivement, puis à combiner les résultats. Sa complexité s’exprime souvent via une relation de récurrence du type T(n) = aT(n/b) + f(n). Le théorème maître permet d’estimer son coût asymptotique. citeturn8search1
+        </li>
+        <li>
+          <strong>Programmation dynamique</strong> : adaptée aux problèmes ayant <em>chevauchement des sous-problèmes</em> et <em>sous-structure optimale</em>. Deux méthodes : la mémoïsation (top-down) et la tabulation (bottom-up). Idéale pour des problèmes comme Fibonacci, chemins optimaux, sac à dos, etc. citeturn8search1
+        </li>
+        <li>
+          <strong>Backtracking</strong> : stratégie d’essais-erreurs avec retour arrière. On construit progressivement une solution partielle ; lorsqu’elle devient invalide, on revient en arrière (backtrack). Utile pour les problèmes d’exploration (sudoku, n‑reines, arbres de recherche). citeturn8search1
+        </li>
+      </ul>
+    </div>
+    <div class="card mb-4 p-3">
+      <h4>3️⃣ Application pratique</h4>
+      <p>
+        Dans mon rôle de Stagiaire – Agent Test chez MTN CI, je peux utiliser :
+      </p>
+      <ul>
+        <li><strong>Diviser pour régner</strong> : pour accélérer l’analyse de gros fichiers de logs en les découpant en segments traités indépendamment, puis en combinant les résultats (détection d’erreurs, regroupement par type). citeturn8search1</li>
+        <li><strong>Programmation dynamique</strong> : pour optimiser des comparaisons de données ou des opérations répétitives dans des scripts d’automatisation, notamment lorsque les mêmes sous-calculs reviennent souvent. citeturn8search1</li>
+        <li><strong>Backtracking</strong> : pour explorer des scénarios de test complexes ou valider des combinaisons de paramètres lorsque certaines configurations sont invalides et nécessitent un retour arrière. citeturn8search1</li>
+      </ul>
+    </div>
+    <div class="card p-3">
+      <h4>4️⃣ Auto-évaluation</h4>
+      <ul>
+        <h5>Ce que je maîtrise bien :</h5>
+        <li>Les principes des trois paradigmes (DPR, programmation dynamique, backtracking).</li>
+        <li>La notion de sous-problème optimal et de chevauchement.</li>
+        <li>La structure d’un algorithme récursif et son mécanisme de division.</li>
+        <h5>Ce que je dois améliorer :</h5>
+        <li>Résolution des équations de récurrence complexes.</li>
+        <li>Identification des problèmes adaptés à la programmation dynamique.</li>
+        <li>Mise en œuvre pratique du backtracking sur des cas réels.</li>
+        <h5>Stratégie pour progresser :</h5>
+        <li>Pratiquer la résolution de récurrences avec le théorème maître.</li>
+        <li>Coder plusieurs exercices de programmation dynamique (Fibonacci, sac à dos, chemins optimaux).</li>
+        <li>Mettre en place un mini-solveur backtracking (Sudoku ou n‑reines) pour m’entraîner.</li>
+      </ul>
+    </div>
+  </main>
+  
     <footer class="text-center text-muted py-3">
         © 2026 – Portfolio Algorithmique et Complexité
     </footer>
